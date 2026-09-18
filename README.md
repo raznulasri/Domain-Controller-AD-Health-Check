@@ -34,3 +34,10 @@ Run the script directly from GitHub without cloning the repo:
 
 ```powershell
 iwr -useb https://raw.githubusercontent.com/raznulasri/Domain-Controller-AD-Health-Check/main/DCHealthCheck.ps1 | iex
+```
+Or download to your local Windows machine
+
+```powershell
+cd $home\Desktop
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/raznulasri/Domain-Controller-AD-Health-Check/main/DCHealthCheck.ps1" -OutFile ".\DCHealthCheck.ps1"
+
