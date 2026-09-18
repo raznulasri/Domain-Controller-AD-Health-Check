@@ -1,4 +1,4 @@
-# Active Directory Domain Controller Health Check (`DCHealthCheck.ps1`)
+# Active Directory Domain Controller Health Check
 
 ![PowerShell](https://img.shields.io/badge/PowerShell-5.1%2B-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
