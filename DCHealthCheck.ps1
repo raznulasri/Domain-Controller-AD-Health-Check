@@ -23,13 +23,8 @@ netdom query fsmo
 
 
 
-
-## Forces immediate Active Directory (AD) replication
-
-
-
-
-
+Manual
+## echo "Forces immediate Active Directory (AD) replication"
 # repadmin /syncall /AeD
 
 
