@@ -1,5 +1,3 @@
-##
-
 <#
 .SYNOPSIS
     Automated Active Directory Health Check Script
@@ -50,7 +48,7 @@ try {
 # 3. Domain Controller Health Checks
 $RequiredServices = 'NTDS', 'DNS', 'KDC', 'Netlogon', 'W32Time'
 
-foreach ($DC in $DCs) {
+foreach ($DC in$DCs) {
     $DCName =$DC.HostName
     Write-Report "`n===================================================="
     Write-Report " AUDITING DC: $DCName"
@@ -66,7 +64,7 @@ foreach ($DC in $DCs) {
     Write-Report "`n  [Services Status]"
     try {
         $Services = Get-Service -ComputerName $DCName -Name$RequiredServices -ErrorAction Stop
-        foreach ($Svc in $Services) {
+        foreach ($Svc in$Services) {
             $StatusStr = if ($Svc.Status -eq 'Running') { "PASS" } else { "FAIL" }
             Write-Report "  - [$StatusStr] $($Svc.Name) ($($Svc.DisplayName)): $($Svc.Status)"
         }
@@ -86,9 +84,9 @@ foreach ($DC in $DCs) {
 
     # C. Critical Event Log Errors (Last 24 Hours)
     Write-Report "`n  [Critical Event Logs (Last 24 Hours)]"
-    $LogNames = @('Directory Service', 'DNS Server', 'System'); $StartTime = (Get-Date).AddHours(-24)
+    $LogNames = @('Directory Service', 'DNS Server', 'System')$StartTime = (Get-Date).AddHours(-24)
 
-    foreach ($Log in $LogNames) {
+    foreach ($Log in$LogNames) {
         try {
             $Errors = Get-WinEvent -ComputerName$DCName -FilterHashtable @{
                 LogName   = $Log
