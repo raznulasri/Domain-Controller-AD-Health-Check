@@ -1,15 +1,36 @@
-echo "Domain Controller Health"
-Get-Service -Name NTDS, DNS, KDC, Netlogon, W32Time | Select-Object Name, DisplayName, Status, StartType
+# Active Directory Domain Controller Health Check (`DCHealthCheck.ps1`)
 
-echo "Replication"
-repadmin /showrepl
-redamin /replsummary
+![PowerShell](https://img.shields.io/badge/PowerShell-5.1%2B-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Platform](https://img.shields.io/badge/Platform-Windows%20Server-lightgrey.svg)
 
-echo "SYSVOL Synchronization"
-dfsrmig /getglobalstate
+A lightweight PowerShell diagnostic tool designed to evaluate the operational health of Active Directory Domain Controllers (DCs). It automates key administrative checks for services, replication, SYSVOL status, diagnostics, and FSMO role allocations.
 
-echo "Diagnostic test across all core DC roles, services, security, and DNS configurations."
-dcdiag /v
+---
 
-echo "FSMO Roles"
-netdom query fsmo
+## 🔍 Included Health Checks
+
+| Check | Tool / Command | Description |
+| :--- | :--- | :--- |
+| **Core DC Services** | `Get-Service` | Verifies service status and start types for `NTDS`, `DNS`, `KDC`, `Netlogon`, and `W32Time`. |
+| **AD Replication** | `repadmin` | Runs `/showrepl` and `/replsummary` to check partner status and replication failures. |
+| **SYSVOL Sync** | `dfsrmig` | Queries global DFSR state (`/getglobalstate`) for SYSVOL replication health. |
+| **DC Diagnostics** | `dcdiag` | Performs comprehensive, verbose diagnostics (`/v`) across core DC roles and DNS configs. |
+| **FSMO Roles** | `netdom` | Identifies current holders of all 5 Operations Master roles. |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+* **OS:** Windows Server (2012 R2 or newer)
+* **Privileges:** Run with elevated **Domain Admin** or equivalent credentials.
+* **Tools:** Active Directory Domain Services (AD DS) tools / RSAT installed.
+
+### Installation & Execution
+
+1. Clone or download this repository:
+   ```powershell
+   git clone [https://github.com/](https://github.com/)<your-username>/<your-repo-name>.git
+   cd <your-repo-name>
