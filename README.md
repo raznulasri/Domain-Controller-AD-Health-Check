@@ -30,7 +30,7 @@ A lightweight PowerShell diagnostic tool designed to evaluate the operational he
 
 ### Installation & Execution
 
-1. Clone or download this repository:
-   ```powershell
-   git clone [https://github.com/](https://github.com/)<your-username>/<your-repo-name>.git
-   cd <your-repo-name>
+Run the script directly from GitHub without cloning the repo:
+
+```powershell
+iwr -useb [https://raw.githubusercontent.com/raznulasri/DCHealthCheck/main/DCHealthCheck.ps1](https://raw.githubusercontent.com/raznulasri/DCHealthCheck/main/DCHealthCheck.ps1) | iex
