@@ -4,7 +4,7 @@ Get-Service -Name NTDS, DNS, KDC, Netlogon, W32Time | Select-Object Name, Displa
 
 echo "Replication"
 repadmin /showrepl
-redamin /replsummary
+repadmin /replsummary
 
 echo "SYSVOL Synchronization"
 dfsrmig /getglobalstate
