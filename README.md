@@ -1,12 +1,15 @@
-# Active Directory Quick Health Check
+echo "Domain Controller Health"
+Get-Service -Name NTDS, DNS, KDC, Netlogon, W32Time | Select-Object Name, DisplayName, Status, StartType
 
-A simple collection of PowerShell and CMD commands to perform rapid diagnostic checks on Active Directory Domain Controllers (DCs).
+echo "Replication"
+repadmin /showrepl
+redamin /replsummary
 
----
+echo "SYSVOL Synchronization"
+dfsrmig /getglobalstate
 
-## 🚀 Quick Execution (One-Liner)
+echo "Diagnostic test across all core DC roles, services, security, and DNS configurations."
+dcdiag /v
 
-To run all health checks sequentially directly from GitHub without downloading a local file, open PowerShell as an Administrator and run:
-
-```powershell
-iex (iwr "[https://raw.githubusercontent.com/raznulasri/DomainDomain-Controller-AD-Health-Check/main/ADHealthCheck.ps1](https://raw.githubusercontent.com/raznulasri/DomainDomain-Controller-AD-Health-Check/main/ADHealthCheck.ps1)").Content
+echo "FSMO Roles"
+netdom query fsmo
