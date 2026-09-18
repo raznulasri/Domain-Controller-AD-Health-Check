@@ -33,4 +33,4 @@ A lightweight PowerShell diagnostic tool designed to evaluate the operational he
 Run the script directly from GitHub without cloning the repo:
 
 ```powershell
-iwr -useb [https://raw.githubusercontent.com/raznulasri/DCHealthCheck/main/DCHealthCheck.ps1](https://raw.githubusercontent.com/raznulasri/DCHealthCheck/main/DCHealthCheck.ps1) | iex
+iwr -useb https://raw.githubusercontent.com/raznulasri/DCHealthCheck/main/DCHealthCheck.ps1 | iex
