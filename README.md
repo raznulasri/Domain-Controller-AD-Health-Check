@@ -46,6 +46,7 @@ Active Directory Health Check Script (HTML Output). Log file will save to C:\
 ```powershell
 iwr -useb https://raw.githubusercontent.com/raznulasri/Domain-Controller-AD-Health-Check/main/browserhc.ps1 | iex
 ```
+![App Dashboard Layout](AD.JPG)
 
 ### Manual list of command
 
@@ -61,4 +62,4 @@ iwr -useb https://raw.githubusercontent.com/raznulasri/Domain-Controller-AD-Heal
 * repadmin /syncall /AeD
 
 
-![App Dashboard Layout](AD.jpg)
+![App Dashboard Layout](AD.JPG)
