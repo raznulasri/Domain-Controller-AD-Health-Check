@@ -61,4 +61,4 @@ iwr -useb https://raw.githubusercontent.com/raznulasri/Domain-Controller-AD-Heal
 * repadmin /syncall /AeD
 
 
-![App Dashboard Layout](images.jfif)
+![App Dashboard Layout](AD.jpg)
