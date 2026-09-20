@@ -60,3 +60,7 @@ iwr -useb https://raw.githubusercontent.com/raznulasri/Domain-Controller-AD-Heal
 #### Optional
 
 * repadmin /syncall /AeD
+
+---
+
+Thank you for using this project! Your support is greatly appreciated.
