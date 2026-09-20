@@ -40,4 +40,17 @@ Or download to your local Windows machine
 ```powershell
 cd $home\Desktop
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/raznulasri/Domain-Controller-AD-Health-Check/main/DCHealthCheck.ps1" -OutFile ".\DCHealthCheck.ps1"
+```
 
+### Manual list of command
+
+* Get-Service -Name NTDS, DNS, KDC, Netlogon, W32Time | Select-Object Name, DisplayName, Status, StartType
+* repadmin /showrepl
+* repadmin /replsummary
+* dfsrmig /getglobalstate
+* dcdiag /v
+* netdom query fsmo
+
+#### Optional
+
+* repadmin /syncall /AeD
