@@ -41,7 +41,7 @@ Or download script to your local Windows machine (desktop)
 cd $home\Desktop
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/raznulasri/Domain-Controller-AD-Health-Check/main/DCHealthCheck.ps1" -OutFile ".\DCHealthCheck.ps1"
 ```
-Active Directory Health Check Script (HTML Output). Log file will save to C:\
+Active Directory Health Check (HTML Output). Log file will save to C:\. Run the script directly from GitHub without download.
 
 ```powershell
 iwr -useb https://raw.githubusercontent.com/raznulasri/Domain-Controller-AD-Health-Check/main/browserhc.ps1 | iex
