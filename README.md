@@ -60,6 +60,3 @@ iwr -useb https://raw.githubusercontent.com/raznulasri/Domain-Controller-AD-Heal
 #### Optional
 
 * repadmin /syncall /AeD
-
-
-![App Dashboard Layout](AD.JPG)
