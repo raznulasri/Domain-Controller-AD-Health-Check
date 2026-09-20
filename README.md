@@ -35,11 +35,16 @@ Run the script directly from GitHub without cloning the repo:
 ```powershell
 iwr -useb https://raw.githubusercontent.com/raznulasri/Domain-Controller-AD-Health-Check/main/DCHealthCheck.ps1 | iex
 ```
-Or download to your local Windows machine
+Or download script to your local Windows machine (desktop)
 
 ```powershell
 cd $home\Desktop
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/raznulasri/Domain-Controller-AD-Health-Check/main/DCHealthCheck.ps1" -OutFile ".\DCHealthCheck.ps1"
+```
+Active Directory Health Check Script (HTML Output)
+
+```powershell
+iwr -useb https://raw.githubusercontent.com/raznulasri/Domain-Controller-AD-Health-Check/main/browserhc.ps1 | iex
 ```
 
 ### Manual list of command
